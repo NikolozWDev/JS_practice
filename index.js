@@ -234,3 +234,77 @@ const array6 = {
 };
 
 console.log(array6.contacts.email);
+
+
+
+
+
+function welcome() {
+    console.log('Hello This Is Welcome String');
+};
+
+welcome();
+
+
+
+
+function userWelcome(userFirstName,) {
+    console.log(`Hello ${userFirstName}, how are you ?`);
+};
+
+userWelcome('Nikoloz');
+
+
+
+
+function userSettings(userName, messages) {
+    console.log(`Hello ${userName}, you have ${messages} messages !`);
+};
+userSettings('Gio', 8);
+userSettings('kako', 3);
+
+
+
+
+function userPro1(namePro1, messages1 = 0) {
+    console.log(`Hello ${namePro1}, you have ammm... ${messages1} messages#PRO !`);
+};
+userPro1('Sandro');
+userPro1('Giorgi', 24);
+
+
+
+
+function userPro2(age,) {
+    return `you are ${age} years old !`;
+};
+// userPro2(20);
+console.log(userPro2(15));
+
+let variable3 = userPro2(20);
+if(variable3 >= 18) {
+    console.log(`Congrulation you are man !`);
+} else {
+    console.log(`oh, you are kid !`);
+};
+
+
+
+
+
+
+
+
+
+function calculateUserAge(userBirthAge,) {
+    return 2025 - userBirthAge;
+};
+
+function averageAge(person1, person2, person3,) {
+    function avgAge() {
+        const calculateResult = (calculateUserAge(person1) + calculateUserAge(person2) + calculateUserAge(person3)) / 3;
+        console.log(`3 persons average age is ${calculateResult}`);
+    };
+    avgAge();
+};
+averageAge(2009, 1990, 2015,);

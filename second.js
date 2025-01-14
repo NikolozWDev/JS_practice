@@ -97,15 +97,29 @@ const project = {
 };
 
 
+let i10 = 1;
+while(i10 < project.students.length) {
+    console.log(`${project.students[i10].firstName} ${project.students[i10].lastName}`);
+    i10 = i10 + 2;
+};
+
+
 // let i10 = 0;
 // while(i10 < project.students.length) {
-//     console.log(`${project.students[i10].firstName} ${project.students[i10].lastName}`);
+//     console.log(project.students[i10].firstName);
 //     i10 = i10 + 1;
 // };
 
 
-let i10 = 0;
-while(i10 < project.students.length) {
-    console.log(project.students[i10].firstName);
-    i10 = i10 + 1;
+
+
+function calculateAge(birthAge) {
+    console.log('calculating to who are you!');
+    return 2025 - birthAge;
+};
+const age = calculateAge(2003);
+if(age > 21) {
+    console.log('Congrats, you are a man');
+} else {
+    console.log('oh, you are a kid');
 };
