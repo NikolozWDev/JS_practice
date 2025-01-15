@@ -123,3 +123,28 @@ if(age > 21) {
 } else {
     console.log('oh, you are a kid');
 };
+
+
+
+function numbers(a, b) {
+    return (a + b) / 2;
+};
+const numbersResult = numbers(10, 16);
+console.log(numbersResult);
+
+
+
+
+function operationF1(n) {
+    let i11 = 0;
+    while (i11 <= 50) {
+        console.log(i11);
+        i11 = i11 + 1;
+        if (n == i11) {
+            return 1;
+        }
+    }
+    return n * (n - 1);
+}
+
+console.log(operationF1(5));
