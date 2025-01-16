@@ -148,3 +148,21 @@ function operationF1(n) {
 }
 
 console.log(operationF1(5));
+
+
+
+
+
+// function userCalculateAge(userAgeBirth) {
+//     return 2025 - userAgeBirth;
+// };
+// function averageUserAge(personUser1, personUser2, personUser3, personUser4, personUser5) {
+//     const avgUserAge = ( userCalculateAge(personUser1) + userCalculateAge(personUser2) + userCalculateAge(personUser3) +
+//      userCalculateAge(personUser4) + userCalculateAge(personUser5) ) / 5;
+//      console.log(avgUserAge);
+// };
+// averageUserAge(2015, 2010, 2000, 2009, 2011);
+
+
+
+

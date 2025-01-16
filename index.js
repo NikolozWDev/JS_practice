@@ -296,15 +296,38 @@ if(variable3 >= 18) {
 
 
 
-function calculateUserAge(userBirthAge,) {
-    return 2025 - userBirthAge;
+function userCalculateAge(userAgeBirth) {
+    return 2025 - userAgeBirth;
 };
+function averageUserAge(personUser1, personUser2, personUser3, personUser4, personUser5) {
+    const avgUserAge = ( userCalculateAge(personUser1) + userCalculateAge(personUser2) + userCalculateAge(personUser3) +
+     userCalculateAge(personUser4) + userCalculateAge(personUser5) ) / 5;
+     console.log(avgUserAge);
+};
+averageUserAge(2009, 1970, 2005, 1965, 2019);
 
-function averageAge(person1, person2, person3,) {
-    function avgAge() {
-        const calculateResult = (calculateUserAge(person1) + calculateUserAge(person2) + calculateUserAge(person3)) / 3;
-        console.log(`3 persons average age is ${calculateResult}`);
-    };
-    avgAge();
+
+
+
+
+
+
+
+function calculateFutureAge(userBIrthNumber, futureBirthNumber) {
+    return futureBirthNumber - userBIrthNumber;
 };
-averageAge(2009, 1990, 2015,);
+const calculateUserAge = `your age will be ${calculateFutureAge(2009, 2099)}`;  // Here you can control User ages
+console.log(calculateUserAge);
+
+
+
+
+// let i11 = 0;
+// while (i11 <= 100000) {
+//     if (i11 % 2 === 0) {
+//         console.log(`This number: ${i11} is even`);
+//     } else {
+//         console.log(`This number: ${i11} is odd`);
+//     }
+//     i11 += 2;  // Increment by 2
+// }
