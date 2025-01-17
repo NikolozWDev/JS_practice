@@ -331,3 +331,111 @@ console.log(calculateUserAge);
 //     }
 //     i11 += 2;  // Increment by 2
 // }
+
+
+
+
+function sakg(x = `undefind, plese submit your coordinates`, y = `undefind, plese submit your coordinates`) {
+    return `Vertical Coordinate: ${x} Horizon Coordinate: ${y}`;
+};
+console.log(sakg(10, 25)); // here you can change coordinates
+
+
+
+let k = Number('1525')
+console.log(typeof k);
+let z = 2.2435643;
+console.log(z.toFixed(6));
+console.log(z.toPrecision(3));
+console.log(typeof z.toString());
+
+
+
+let k1 = Math.abs(-32);
+console.log(k1);
+let k2 = Math.round(5.341);
+console.log(k2);
+let k3 = Math.floor(9.71);
+console.log(k3);
+let k4 = Math.ceil(5.25);
+console.log(k4);
+let k5 = Math.pow(10, 5);
+console.log(k5);
+let k6 = Math.sqrt(25);
+console.log(k6);
+
+let k7 = Math.random();
+let k7Result = k7 * 100
+const k7ResultPro = Math.round(k7Result);
+console.log(k7ResultPro);
+
+let k8 = Math.max(10, 20, 32, 51, 61, 71, 73, 20);
+let k9 = Math.min(10, 20, 32, 51, 61, 71, 73, 20);
+console.log(k8, k9);
+
+
+
+let message1 = 'Hello This Is Javascript Obiects';
+let search1 = 'Javascript';
+let found1 = message1.includes(search1);
+console.log(found1);
+console.log(message1.includes('TailwindCSS'));
+
+let block1 = '!';
+let blockResult = block1.repeat(10);
+let message2 = `Hello This Is Javascript Obiects ${blockResult}`;
+console.log(message2);
+
+
+let message3 = 'This is practicint test string';
+let message3Operation1 = message3.replace('test', 'operationCompleted____!');
+console.log(message3Operation1);
+
+
+let message4 = "Hello how are you guys?";
+const message4Final = message4.split(' ');
+console.log(message4Final);
+
+
+let message5 = "oh, listen don't understand?";
+let message5Result = message5.startsWith('oh');
+console.log(message5Result);
+
+let message6 = 'do you understand?!';
+let message6Result = message6.endsWith('?!');
+console.log(message6Result);
+
+
+let message7 = 'Hello bro is this is ?';
+console.log(message7.toUpperCase());
+console.log(message7.toLowerCase());
+
+
+
+let array7 = [51, 16, 73, 25, 72, 83];
+array7.push(10, 15);
+console.log(array7);
+
+const array7Pop1 = array7.pop();
+const array7Pop2 = array7.pop();
+const array7Pop3 = array7.pop();
+const array7Pop4 = array7.pop();
+console.log(array7);
+
+array7.shift();
+console.log(array7);
+
+array7.unshift(40);
+console.log(array7);
+
+
+let array8 = [20, 31, 61, 76, 41];
+let array8Reverse = array8.reverse();
+console.log(array8);
+
+let array8Join = array8.join(' ');
+console.log(array8Join);
+
+let array9 = ['Hello', 'This', 'Is', 'Pro',];
+let array9Join = array9.join(` `);
+console.log(array9Join);
