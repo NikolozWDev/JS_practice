@@ -365,9 +365,9 @@ let k6 = Math.sqrt(25);
 console.log(k6);
 
 let k7 = Math.random();
-let k7Result = k7 * 100
-const k7ResultPro = Math.round(k7Result);
-console.log(k7ResultPro);
+let k7Operation = k7 * 100
+const k7Result = Math.round(k7Operation);
+console.log(k7Result);
 
 let k8 = Math.max(10, 20, 32, 51, 61, 71, 73, 20);
 let k9 = Math.min(10, 20, 32, 51, 61, 71, 73, 20);
@@ -387,7 +387,7 @@ let message2 = `Hello This Is Javascript Obiects ${blockResult}`;
 console.log(message2);
 
 
-let message3 = 'This is practicint test string';
+let message3 = 'This is practicing test string';
 let message3Operation1 = message3.replace('test', 'operationCompleted____!');
 console.log(message3Operation1);
 
