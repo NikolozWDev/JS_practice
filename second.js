@@ -166,3 +166,17 @@ console.log(operationF1(5));
 
 
 
+
+function calculateN(n) {
+    return Math.floor(n / 2);
+};
+console.log(calculateN(7));
+console.log(calculateN(15));
+
+
+
+
+function nameShuffler(str){
+    return str.split(' ').reverse().join(' ');
+};
+console.log(nameShuffler('john McClane'));
