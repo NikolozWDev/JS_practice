@@ -304,7 +304,7 @@ function averageUserAge(personUser1, personUser2, personUser3, personUser4, pers
      userCalculateAge(personUser4) + userCalculateAge(personUser5) ) / 5;
      console.log(avgUserAge);
 };
-averageUserAge(2009, 1970, 2005, 1965, 2019);
+averageUserAge(2009, 1970, 2005, 1965, 2019);  // here you can control ages
 
 
 
