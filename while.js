@@ -165,3 +165,18 @@ if(svanisNumber(99) >= 100) {       // here you can change svanisNumber
 } else {
     console.log('არ არის ღორი');
 };
+
+
+
+const hourVariable = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24];
+ih = 0;
+while(ih <= hourVariable.length) {
+    ih = ih + 1;
+    if(ih >= 6 && ih <= 12) {
+        console.log('Good Morning');
+    } else if(ih >= 13 && ih <= 17) {
+        console.log('Good Afternoon');
+    } else if(ih >= 18 && ih <= 24) {
+        console.log('Good Night');
+    };
+};
