@@ -180,3 +180,12 @@ function nameShuffler(str){
     return str.split(' ').reverse().join(' ');
 };
 console.log(nameShuffler('john McClane'));
+
+
+
+
+
+function centuryYear(year) {
+    return Math.ceil(year / 100);
+};
+console.log(centuryYear(2025));
