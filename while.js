@@ -149,3 +149,19 @@ while(i6 < array3.length) {
     };
     i6 = i6 + 1;
 };
+
+
+
+
+
+const xinkali = 100;
+
+function svanisNumber(xinkaliNumber) {
+    return xinkaliNumber
+};
+
+if(svanisNumber(99) >= 100) {       // here you can change svanisNumber
+    console.log('ღორი');
+} else {
+    console.log('არ არის ღორი');
+};
