@@ -45,3 +45,14 @@ body {
 .for1 {
     background-color: brown;
 }
+.middle2 {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.middle2-div1 {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
