@@ -6,7 +6,6 @@ while(javascript <= 100) {
     javascript = javascript + 1;
 };
 
-
 let work1 = 1;
 while(work1 < 60000) {
     console.log(work1);

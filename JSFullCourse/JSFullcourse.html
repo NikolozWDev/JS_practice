@@ -318,7 +318,7 @@ let parkOpenWordHelper;
 if(parkOpen === true) {
     parkOpenWord = 'park is open now.';
     parkOpenWordHelper = 'so you can enter.';
-    if( (ageF1 < 21 || ageF1 > 65) && parkOpen ) {
+    if( (ageF1 < 21 || ageF1 > 65) || parkOpen ) {
         parkOpenWordHelper = 'but you can not enter';
     };
 } else if(parkOpen === false) {
