@@ -56,3 +56,18 @@ body {
     align-items: center;
     gap: 5px;
 }
+
+.congrats-div {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.congrats-div-div1 {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
+}

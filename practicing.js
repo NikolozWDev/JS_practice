@@ -9,3 +9,8 @@ cost2 = cost * 0.1;                      // company's 10% free order
 costResult = cost - cost2;       
 
 console.log(`you have to pay ${costResult}$`);
+
+
+let operationSo1 = Math.random() * 100;
+let ageF1 = Math.round(operationSo1);
+console.log(ageF1);
