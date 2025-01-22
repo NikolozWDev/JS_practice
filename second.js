@@ -189,3 +189,13 @@ function centuryYear(year) {
     return Math.ceil(year / 100);
 };
 console.log(centuryYear(2025));
+
+
+
+
+function shortDateTime(dateTime) {
+    return dateTime.split(', ')[0];
+};
+let origin = "Friday May 2, 7pm";
+const shortOrigin = shortDateTime(origin);
+console.log(shortOrigin);
