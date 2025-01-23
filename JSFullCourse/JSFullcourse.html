@@ -17,28 +17,12 @@
         
         <div class="primary-div-div1">
 
-            <button class="button1"
-            onclick="
-            
-            alert('added');
-
-            ">Add cart</button>
-            <button class="button1 for1"
-            onclick="
-            
-            alert('ignored');
-
-            ">Decline</button>
+            <button class="button1" onclick="alert('added');">Add cart</button>
+            <button class="button1 for1" onclick="alert('ignored');">Decline</button>
 
         </div>
 
-        <button class="button1"
-        onclick="
-        
-        variable1 = variable1 + 1;
-        console.log(`times: ${variable1}`);
-
-        ">Click here to +1</button>
+        <button class="button1" onclick="addCart()">Click here to +1</button>
 
     </div>
 </div>
@@ -53,97 +37,18 @@
     <div class="primary-div-div1">
 
 
-        <button onclick="
-        console.log(`cart Quantity is ${cartQuantity}`);
-            ">Show Quantity</button>
+        <button onclick="showCart()">Show Quantity</button>
+        <button onclick="updateCart(1)">Add to Cart</button>
+        <button onclick="updateCart(2)">+2</button>
+        <button onclick="updateCart(3)">+3</button>
+        <button onclick="updateCart(5)">+5</button>
+        <button onclick="updateCart(-1)">-1</button>
+        <button onclick="updateCart(-2)">-2</button>
+        <button onclick="updateCart(-3)">-3</button>
+        <button onclick="resetCart()">Reset Cart</button>
 
 
-        <button onclick="
-        if(cartQuantity < 10) {
-            cartQuantity = cartQuantity + 1;
-            console.log(`added +1, cart Quantity is ${cartQuantity}`);
-        } else if(cartQuantity = 10) {
-            console.log(`you ordered 10 > max is 10, so you can't add 1 order`);
-        };
-        ">Add to Cart</button>
-
-
-        <button onclick="
-        if(cartQuantity < 9) {
-            cartQuantity = cartQuantity + 2;
-            console.log(`added +2, cart Quantity is ${cartQuantity}`);
-        } else if(cartQuantity = 9) {
-            console.log(`you ordered 8 >, max is 10, so you can't add 2 order`);
-        };
-        ">+2</button>
-
-
-        <button onclick="
-        if(cartQuantity < 8) {
-            cartQuantity = cartQuantity + 3;
-            console.log(`added +3, cart Quantity is ${cartQuantity}`);
-        } else if(cartQuantity = 8) {
-            console.log(`you ordered 7 >, max is 10, so you can't add 3 order`);
-        };
-        ">+3</button>
-
-        <button onclick="
-        if(cartQuantity < 6) {
-            cartQuantity = cartQuantity + 5;
-            console.log(`added +5, cart Quantity is ${cartQuantity}`);
-        } else if(cartQuantity = 6) {
-            console.log(`you ordered 6 >, max is 10, so you can't add 5 order`);
-        };
-        ">
-        +5
-        </button>
-
-
-        <button onclick="
-        if(cartQuantity > 0) {
-            cartQuantity = cartQuantity - 1;
-            console.log(`dicreased -1, cart Quantity is ${cartQuantity}`);
-        }
-         else {
-            console.log(`you have ${cartQuantity} order so you cant dicrease your order`);
-        };
-        ">
-        -1
-        </button>
-
-
-        <button onclick="
-        if(cartQuantity >= 2) {
-            cartQuantity = cartQuantity - 2;
-            console.log(`dicreased -2, cart Quantity is ${cartQuantity}`);
-        }
-         else {
-            console.log(`you have ${cartQuantity} order so you cant dicrease your order number 2`);
-        };
-        ">
-        -2
-
-
-
-        <button onclick="
-        if(cartQuantity >= 3) {
-            cartQuantity = cartQuantity - 3;
-            console.log(`dicreased -3, cart Quantity is ${cartQuantity}`);
-        }
-         else {
-            console.log(`you have ${cartQuantity} order so you cant dicrease your order number 3`);
-        };
-        ">
-        -3
-        </button>
-
-
-        <button onclick="
-        cartQuantity = 0;
-        console.log(`cart reseted`);
-        ">Reset Cart</button>
-
-</button> <p>Max is <strong>10</strong> product.</p>
+        <p>Max is <strong>10</strong> product.</p>
         
     </div>
 
@@ -192,56 +97,14 @@
 
 
 
-<button
-onclick="
+    <button onclick="randomisation()">Open park</button>
 
-let operationSo1 = Math.random() * 100;
-let ageF1 = Math.round(operationSo1);
-
-let resultPark;
-
-let operationSo2 = Math.random() * 10;
-let ageF2 = Math.round(operationSo2);
-
-let parkOpen;
-if(ageF2 >= 0 && ageF2 < 5) {
-    parkOpen = true;
-} else if(ageF2 >= 5 && ageF2 < 10) {
-    parkOpen = false;
-};
-
-let parkOpenWord;
-let parkOpenWordHelper;
-if(parkOpen === true) {
-    parkOpenWord = 'park is open now.';
-    parkOpenWordHelper = 'so you can enter.';
-    if( (ageF1 < 21 || ageF1 > 65) || parkOpen ) {
-        parkOpenWordHelper = 'but you can not enter';
-    };
-} else if(parkOpen === false) {
-    parkOpenWord = 'park is closed now.';
-    parkOpenWordHelper = 'so you can not enter';
-};
-
-
-if( (ageF1 >= 21 && ageF1 <= 65) && parkOpen ) {
-    resultPark = `you are ${ageF1} years old. so you can join park. ${parkOpenWord} ${parkOpenWordHelper}`;
-} else if( (ageF1 < 21 || ageF1 > 65) && parkOpen ) {
-    resultPark = `you are ${ageF1} years old. so you can't join park. ${parkOpenWord} ${parkOpenWordHelper}`;
-} else {
-    resultPark = `You are ${ageF1} years old. so you can join park. ${parkOpenWord} ${parkOpenWordHelper}`;
-};
-
-alert(resultPark);
-
-"
->Open park</button>
 
 </div>
 
 
 
 
-    <script src="./JSFullCourse.js"></script>
+        <script src="./JSFullCourse.js" defer></script>
 </body>
 </html>
