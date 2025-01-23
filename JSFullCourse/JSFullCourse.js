@@ -8,6 +8,9 @@ function addCart() {
 };
 
 
+
+
+
 // for project cartQuantity
 let cartQuantity = 0;
 
@@ -39,7 +42,38 @@ function showCart() {
 
 
 
+
+
 //for project rock, paper, scissors
+
+
+// const score = {
+//     wins: 0,
+//     losses: 0,
+//     ties: 0,
+// };
+
+
+let score = JSON.parse(localStorage.getItem('score'));
+
+
+
+function resetScoreFunction() {
+    score.wins = 0;
+    score.losses = 0;
+    score.ties = 0;
+    localStorage.removeItem('score');
+};
+if(score === null) {
+    score = {
+        wins: 0,
+        losses: 0,
+        ties: 0,
+    };
+};
+
+
+
 function finalGame(playerMove) {
 
     const randomNumber = Math.random();
@@ -58,21 +92,32 @@ function finalGame(playerMove) {
 
     if(playerMove === computerMove) {
         result = 'Tie'
+        score.ties = score.ties + 1;
     } else if(
         (playerMove === 'Rock' && computerMove === 'Scissors') ||
         (playerMove === 'Paper' && computerMove === 'Rock') ||
         (playerMove === 'Scissors' && computerMove === 'Paper')
     ) {
         result = 'You win';
+        score.wins = score.wins + 1;
     } else {
         result = 'You lose';
+        score.losses = score.losses + 1;
     };
 
 
-    alert(`${playerMove}. computer move: ${computerMove}. ${result}`);
+    localStorage.setItem('score', JSON.stringify(score));
+
+    alert(`${playerMove}. computer move: ${computerMove}. ${result}
+Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}.`);
 
 
 };
+
+
+
+
+
 
 
 // for randomisation amount project name park
