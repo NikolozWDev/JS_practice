@@ -12,7 +12,7 @@ function addCart() {
 
 
 // for project cartQuantity
-let cartQuantity = 0;
+let cartQuantity = JSON.parse(localStorage.getItem('quantity')) || 0;
 
 function updateCart(amount) {
 
@@ -23,17 +23,21 @@ function updateCart(amount) {
     } else if(cartQuantity += amount) {
         console.log(`order updated by ${cartQuantity}`);
     };
+    localStorage.setItem('quantity', JSON.stringify(cartQuantity));
 };
 
 function resetCart () {
     cartQuantity = 0;
     console.log(`card reset. ${cartQuantity}`);
+    localStorage.removeItem('quantity');
+    if(cartQuantity === null) {
+        cartQuantity = 0;
+    };
 };
 
 function showCart() {
     console.log(`your cart quantity is: ${cartQuantity}`);
 };
-
 
 
 
