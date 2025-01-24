@@ -40,3 +40,48 @@ function calculateLength(Ml, Ft) {
     Ft = 5280 * Ml;
 };
 console.log(calculateLength(30, 20));
+
+
+
+
+let objectPractice1 = {
+    basketball: 2095,
+};
+objectPractice1.basketball = 2095 + 500;
+objectPractice1['delivery-time'] = '3 days';
+
+console.log(objectPractice1.basketball);
+console.log(objectPractice1);
+
+
+function functionObjectPractice2() {
+    const objectPractice3 = {
+        name: 'product1',
+        price: '300$',
+    };
+    console.log(objectPractice3);
+};
+
+
+
+function functionObjectPractice4() {
+    const objectPractice5 = {
+        name: 'sameProduct',
+        value: '30$',
+    };
+    const objectPractice6 = {
+        name: 'sameProduct',
+        value: '40$'
+    };
+    if(objectPractice5.name === objectPractice6.name) {
+        console.log(true);
+    } else {
+        console.log(false);
+    };
+    let practiceL1 = 'Hello This Is Morning';
+    console.log(practiceL1.toLowerCase());
+
+    let practiceL2 = 'Test1';
+    console.log(practiceL2.repeat(5));
+};
+functionObjectPractice4();
