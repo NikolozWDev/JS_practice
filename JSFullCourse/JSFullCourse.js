@@ -169,3 +169,59 @@ if( (ageF1 >= 21 && ageF1 <= 65) && parkOpen ) {
 alert(resultPark);
 
 };
+
+
+
+
+
+// Heads and Tails logic project
+
+
+let scoreF1 = JSON.parse(localStorage.getItem('scoreF1'));
+
+
+function scoreReset() {
+    scoreF1.wins = 0;
+    scoreF1.losses = 0;
+    localStorage.removeItem('local');
+};
+if(scoreReset === null) {
+    scoreF1.wins = 0;
+    scoreF1.losses = 0;
+}
+
+
+function hTLogic(userMove) {
+
+    let randomMath = Math.random();
+    let pcMove;
+    let resultPro;
+
+    
+    if(randomMath > 0 && randomMath <= 1 / 2) {
+        pcMove = 'Heads';
+    } else if(randomMath > 1 / 2 && randomMath <= 1) {
+        pcMove = 'Tails';
+    };
+
+
+    if(pcMove === userMove) {
+        resultPro = 'You win'
+        scoreF1.wins = scoreF1.wins + 1;
+    } else if(
+        (userMove === 'Heads' && pcMove === 'Tails') ||
+        (userMove === 'Tails' && pcMove === 'Heads')
+    ) {
+        resultPro = 'You lose';
+        scoreF1.losses = scoreF1.losses + 1;
+    };
+
+
+    localStorage.setItem('scoreF1', JSON.stringify(scoreF1));
+
+
+    alert(`You choose ${userMove}. computer choose ${pcMove}. ${resultPro}
+Wins: ${scoreF1.wins}, Losses: ${scoreF1.losses}`);
+
+
+};
