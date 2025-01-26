@@ -177,13 +177,13 @@ alert(resultPark);
 // Heads and Tails logic project
 
 
-let scoreF1 = JSON.parse(localStorage.getItem('scoreF1'));
+let scoreF1 = JSON.parse(localStorage.getItem('scoreF1')) || {wins: 0, losses: 0};
 
 
 function scoreReset() {
     scoreF1.wins = 0;
     scoreF1.losses = 0;
-    localStorage.removeItem('local');
+    localStorage.removeItem('scoreF1');
 };
 if(scoreReset === null) {
     scoreF1.wins = 0;
@@ -225,3 +225,137 @@ Wins: ${scoreF1.wins}, Losses: ${scoreF1.losses}`);
 
 
 };
+
+
+
+
+// practicing DOM
+
+function subscribeF1() {
+
+const subscribeElement = document.querySelector('#subscribe1');
+if(subscribeElement.innerHTML === 'Subscribe') {
+    subscribeElement.innerHTML = 'Subscribed!';
+} else {
+    subscribeElement.innerHTML = 'Subscribe';
+};
+
+};
+
+
+
+
+
+// DOM rpcGame
+
+
+let rpsGameResults = JSON.parse(localStorage.getItem('rpsGame')) || {
+    rpsGameWins: 0,
+    rpsGameLosses: 0,
+    rpsGameTies: 0,
+};
+
+
+
+function updateScore() {
+    document.querySelector('#gameScore').innerHTML = `Wins: ${rpsGameResults.rpsGameWins}. Losses: ${rpsGameResults.rpsGameLosses}. Ties: ${rpsGameResults.rpsGameTies}.`;
+};
+
+updateScore();
+
+
+
+function rpsGameReset() {
+    rpsGameResults.rpsGameWins = 0;
+    rpsGameResults.rpsGameLosses = 0;
+    rpsGameResults.rpsGameTies = 0;
+    localStorage.removeItem('rpsGame');
+    updateScore();
+    document.querySelector('#gameResult').innerHTML = '---';
+    document.querySelector('#moves').innerHTML = '---';
+};
+if(rpsGameReset === null) {
+    rpsGameResults.rpsGameWins = 0;
+    rpsGameResults.rpsGameLosses = 0;
+    rpsGameResults.rpsGameTies = 0;
+}
+
+function rpsGame(clientMove) {
+
+    let randomrps = Math.random();
+    let robotMove;
+    let final;
+
+
+    function rpsGameResult() {
+        document.querySelector('#gameResult').innerHTML = final;
+    };
+
+    function rpsGameMoves() {
+        document.querySelector('#moves').innerHTML = `You: (${clientMove}) | Robot: (${robotMove})`;
+    };
+
+
+    if(randomrps > 0 && randomrps <= 1 / 3) {
+        robotMove = 'Rock';
+    } else if(randomrps > 1 / 3 && randomrps <= 2 / 3) {
+        robotMove = 'Paper';
+    } else if(randomrps > 2 / 3 && randomrps <= 1) {
+        robotMove = 'Scissors';
+    };
+
+
+    if(robotMove === clientMove) {
+        final = 'Tie';
+        rpsGameResults.rpsGameTies = rpsGameResults.rpsGameTies + 1;
+    } else if(
+        (clientMove === 'Rock' && robotMove === 'Scissors') ||
+        (clientMove === 'Scissors' && robotMove === 'Paper') ||
+        (clientMove === 'Paper' && robotMove === 'Rock')
+    ) {
+        final = 'You win'
+        rpsGameResults.rpsGameWins = rpsGameResults.rpsGameWins + 1;
+    } else {
+        final = 'You lose'
+        rpsGameResults.rpsGameLosses = rpsGameResults.rpsGameLosses + 1;
+    };
+
+    
+    localStorage.setItem('rpsGame', JSON.stringify(rpsGameResults));
+
+    rpsGameResult();
+
+    rpsGameMoves();
+
+    updateScore();
+
+
+//     alert(`You: ${clientMove}. Robot: ${robotMove}. ${final}
+// Wins: ${rpsGameResults.rpsGameWins}. Losses: ${rpsGameResults.rpsGameLosses}. Ties: ${rpsGameResults.rpsGameTies}.`);
+
+};
+
+
+
+
+
+// input and cost calculator project
+
+function calculateCost() {
+    const calculate1 = document.querySelector('#input');
+    let costPro = Number(calculate1.value);
+
+    if(costPro < 40) {
+        costPro = costPro + 10;
+    } else if(costPro === 0) {
+        costPro = 0;
+    };
+
+    document.querySelector('#calculateDollar').innerHTML = `$${costPro}`;
+};
+
+function eventpro(event) {
+    if(event.key === 'Enter') {
+        calculateCost();
+    };
+}
