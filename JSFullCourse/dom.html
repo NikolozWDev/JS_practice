@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    
+<button id="goodjob">Good job!</button>
+<button id="second">second button!</button>
+
+
+<script>
+
+    // document.body.innerHTML = 'Hello';
+    // document.body.innerHTML = '<button>job Good bro!</button>';
+    console.log(document.body);
+    document.title = 'DOM changed';
+    if(document.body === document.body.innerHTML) {
+        console.log(true);
+    } else {
+        console.log(false);
+    };
+
+    console.log(document.querySelector('button'));
+    console.log(document.querySelector('button').innerHTML);
+    document.querySelector('button').innerHTML = 'changed';
+
+    const buttonElement = document.querySelector('#second').innerHTML;
+    console.log(buttonElement);
+
+</script>
+</body>
+</html>
