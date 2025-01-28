@@ -180,10 +180,20 @@ alert(resultPark);
 let scoreF1 = JSON.parse(localStorage.getItem('scoreF1')) || {wins: 0, losses: 0};
 
 
+function gameScores() {
+    document.querySelector('#gameScores').innerHTML = `Wins: ${scoreF1.wins}, Losses: ${scoreF1.losses}`;
+};
+
+gameScores();
+
+
 function scoreReset() {
     scoreF1.wins = 0;
     scoreF1.losses = 0;
     localStorage.removeItem('scoreF1');
+    gameScores();
+    document.querySelector('#gameMoves').innerHTML = `---`;
+    document.querySelector('#resultOfGame').innerHTML = `---`;
 };
 if(scoreReset === null) {
     scoreF1.wins = 0;
@@ -196,6 +206,14 @@ function hTLogic(userMove) {
     let randomMath = Math.random();
     let pcMove;
     let resultPro;
+
+    function gameMoves() {
+        document.querySelector('#gameMoves').innerHTML = `You: ${userMove}. PC: ${pcMove}`;
+    };
+
+    function resultOfGame() {
+        document.querySelector('#resultOfGame').innerHTML = resultPro;
+    };
 
     
     if(randomMath > 0 && randomMath <= 1 / 2) {
@@ -219,9 +237,15 @@ function hTLogic(userMove) {
 
     localStorage.setItem('scoreF1', JSON.stringify(scoreF1));
 
+    gameScores();
 
-    alert(`You choose ${userMove}. computer choose ${pcMove}. ${resultPro}
-Wins: ${scoreF1.wins}, Losses: ${scoreF1.losses}`);
+    gameMoves();
+
+    resultOfGame();
+
+
+//     alert(`You choose ${userMove}. computer choose ${pcMove}. ${resultPro}
+// Wins: ${scoreF1.wins}, Losses: ${scoreF1.losses}`);
 
 
 };
@@ -358,4 +382,54 @@ function eventpro(event) {
     if(event.key === 'Enter') {
         calculateCost();
     };
-}
+};
+
+
+
+
+
+
+// DOM excercies #1 (javascript button)
+
+function jspro() {
+    let buttonJsElement = document.querySelector('#javascriptpro');
+    if(buttonJsElement.innerHTML === 'Javascript') {
+        buttonJsElement.innerHTML = 'Is';
+    } else if(buttonJsElement.innerHTML === 'Is') {
+        buttonJsElement.innerHTML = 'Very';
+    } else if(buttonJsElement.innerHTML === 'Very') {
+        buttonJsElement.innerHTML = 'Hard!';
+    } else {
+        buttonJsElement.innerHTML = 'Javascript';
+    };
+};
+
+
+
+
+// DOM excercies #2 (javascript button)
+
+function jspro1() {
+    document.querySelector('#showHiddenMessage1').innerHTML = `არასწორია. დააჭირეთ click here რომ ნახოთ სწორი პასუხი.`;
+    const buttonAbout = document.querySelector('#showHiddenMessage2');
+    buttonAbout.innerHTML = 'Click Here';
+};
+function jspro2() {
+    document.querySelector('#showHiddenMessage3').innerHTML = `სწორი პასუხია: ძალიან რთულია`;
+};
+
+
+
+// DOM excercies #3 (javascript button)
+
+function hiddenName() {
+    const inputpro = document.querySelector('#input2');
+    let inputpromax = String(inputpro.value);
+    document.querySelector('#input2').value = inputpromax;
+    document.querySelector('#hiddenName').innerHTML = `You are ${inputpromax}`;
+};
+function events(event) {
+    if(event.key === 'Enter') {
+        hiddenName();
+    };
+};
