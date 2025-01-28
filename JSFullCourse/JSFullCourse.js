@@ -14,6 +14,11 @@ function addCart() {
 // for project cartQuantity
 let cartQuantity = JSON.parse(localStorage.getItem('quantity')) || 0;
 
+function domtext() {
+    document.querySelector('#cartQuantity').innerHTML = `Your Order: ${cartQuantity}`;
+};
+domtext();
+
 function updateCart(amount) {
 
     if(cartQuantity + amount > 10) {
@@ -24,6 +29,8 @@ function updateCart(amount) {
         console.log(`order updated by ${cartQuantity}`);
     };
     localStorage.setItem('quantity', JSON.stringify(cartQuantity));
+
+    domtext();
 };
 
 function resetCart () {
@@ -33,10 +40,12 @@ function resetCart () {
     if(cartQuantity === null) {
         cartQuantity = 0;
     };
+    domtext();
 };
 
 function showCart() {
     console.log(`your cart quantity is: ${cartQuantity}`);
+    domtext();
 };
 
 
@@ -370,9 +379,9 @@ function calculateCost() {
     let costPro = Number(calculate1.value);
 
     if(costPro < 40) {
-        costPro = costPro + 10;
-    } else if(costPro === 0) {
-        costPro = 0;
+        costPro += 10;
+    } else if(costPro === 10) {
+        document.querySelector('#calculateDollar').innerHTML = `Plese read instructions`;
     };
 
     document.querySelector('#calculateDollar').innerHTML = `$${costPro}`;
@@ -427,9 +436,46 @@ function hiddenName() {
     let inputpromax = String(inputpro.value);
     document.querySelector('#input2').value = inputpromax;
     document.querySelector('#hiddenName').innerHTML = `You are ${inputpromax}`;
+
+    if(inputpromax === ``) {
+        document.querySelector('#hiddenName').innerHTML = `plese submit your name`;
+    };
 };
 function events(event) {
     if(event.key === 'Enter') {
         hiddenName();
     };
 };
+
+
+
+
+
+// DOM excercies #4 (javascript button)
+
+function eventMaster() {
+    const input3 = document.querySelector('#input3');
+    document.querySelector('#input3Text').innerHTML = input3.value;
+};
+
+
+
+
+// DOM excercies #5 (javascript button)
+
+// function resultShow() {
+//     let resultShowpro = document.querySelector('resultpro');
+//     let buttonElements = [1, 2, 3, 4, '+'];
+
+//     if(buttonElements === buttonElements[0]) {
+//         resultShowpro.innerHTML = 1;
+//     } else if(buttonElements === buttonElements[1]) {
+//         resultShowpro.innerHTML = 2;
+//     } else if(buttonElements === buttonElements[2]) {
+//         resultShowpro.innerHTML = 3;
+//     } else if(buttonElements === buttonElements[3]) {
+//         resultShowpro.innerHTML = 4;
+//     } else if(buttonElements === buttonElements[4]) {
+//         resultShowpro.innerHTML = '+';
+//     };
+// };
