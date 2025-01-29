@@ -199,3 +199,11 @@ function shortDateTime(dateTime) {
 let origin = "Friday May 2, 7pm";
 const shortOrigin = shortDateTime(origin);
 console.log(shortOrigin);
+
+
+
+function calculate(number1, number2) {
+    return number1 + number2;
+  };
+
+  console.log(calculate(1)(1));
