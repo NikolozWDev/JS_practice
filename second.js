@@ -206,4 +206,12 @@ function calculate(number1, number2) {
     return number1 + number2;
   };
 
-  console.log(calculate(1)(1));
+//   console.log(calculate(1)(1));
+
+
+
+
+  function spEng(sentence){
+    return sentence.toLowerCase().includes('english');
+  };
+  console.log(spEng('adawdsawsdEnagLishwdasd'));
