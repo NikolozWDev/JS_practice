@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="connection.css">
     <title>JSFullCourse</title>
     <script src="./JSFullCourse.js" defer></script>
 </head>
 <body style="background-color: rgb(29, 29, 29); color: white;">
 
     <a href="dom.html"><div class="absolute1">DOM practicing page</div></a>
+    <a href="rockpaperscissors.html"><div class="absolute2">Rock, Paper, Scissors | Game</div></a>
 
     <div class="div-primary">
     <div class="primary-div">
@@ -139,7 +141,7 @@
     <div class="div-primary for3">
         <div class="primary-div for2">
 
-            <button id="subscribe1" onclick="subscribeF1()">Subscribe</button>
+            <button class="subscribe-button" id="subscribe1" onclick="subscribeF1()">Subscribe</button>
 
         </div>
     </div>
@@ -167,11 +169,11 @@
 
 
             <div class="div-primary for3">
-                <div class="primary-div for2">
+                <div class="primary-div for2 for5">
 
 
-                    <input id="input" type="search" placeholder="Write cost" onkeydown="eventpro(event)">
-                    <button id="calculateCost" onclick="calculateCost()">Calculate</button>
+                    <input id="input" class="input1" type="search" placeholder="Write cost" onkeydown="eventpro(event)">
+                    <button id="calculateCost" class="input1-calculate" onclick="calculateCost()">Calculate</button>
 
 
                     <p id="calculateDollar"></p>
