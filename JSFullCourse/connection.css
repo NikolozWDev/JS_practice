@@ -1,0 +1,66 @@
+
+
+.subscribe-button {
+    border: none;
+    background-color: rgb(214, 214, 214);
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 15px 10px 15px;
+    border-radius: 50px;
+    transition: all 0.4s;
+    cursor: pointer;
+    animation-name: animationb2;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+}
+.subscribe-button:hover {
+    opacity: 0.7;
+}
+@keyframes animationb2 {
+    100% {
+        background-color: rgb(63, 92, 146);
+        color: white;
+    };
+}
+
+.subscribe-button-js {
+    background-color: rgb(63, 92, 146);
+    color: white;
+    transition: all 0.4s;
+    animation-name: animationb1;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+}
+.subscribe-button-js:hover {
+    opacity: 0.7;
+}
+@keyframes animationb1 {
+    100% {
+        background-color: rgb(214, 214, 214);
+        color: black;
+    };
+}
+
+
+
+.input1 {
+    border: 1px solid orange;
+    color: black;
+    padding: 6px 12px 6px 12px;
+    border-radius: 12px;
+}
+
+.input1-calculate {
+    background-color: rgb(35, 126, 35);
+    color: white;
+    font: bold;
+    padding: 6px 10px 6px 10px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.input1-calculate:hover {
+    opacity: 0.8;
+}
