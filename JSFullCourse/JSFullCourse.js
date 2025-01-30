@@ -269,8 +269,10 @@ function subscribeF1() {
 const subscribeElement = document.querySelector('#subscribe1');
 if(subscribeElement.innerHTML === 'Subscribe') {
     subscribeElement.innerHTML = 'Subscribed!';
+    subscribeElement.classList.add('subscribe-button-js');
 } else {
     subscribeElement.innerHTML = 'Subscribe';
+    subscribeElement.classList.remove('subscribe-button-js');
 };
 
 };
@@ -457,25 +459,3 @@ function eventMaster() {
     const input3 = document.querySelector('#input3');
     document.querySelector('#input3Text').innerHTML = input3.value;
 };
-
-
-
-
-// DOM excercies #5 (javascript button)
-
-// function resultShow() {
-//     let resultShowpro = document.querySelector('resultpro');
-//     let buttonElements = [1, 2, 3, 4, '+'];
-
-//     if(buttonElements === buttonElements[0]) {
-//         resultShowpro.innerHTML = 1;
-//     } else if(buttonElements === buttonElements[1]) {
-//         resultShowpro.innerHTML = 2;
-//     } else if(buttonElements === buttonElements[2]) {
-//         resultShowpro.innerHTML = 3;
-//     } else if(buttonElements === buttonElements[3]) {
-//         resultShowpro.innerHTML = 4;
-//     } else if(buttonElements === buttonElements[4]) {
-//         resultShowpro.innerHTML = '+';
-//     };
-// };
