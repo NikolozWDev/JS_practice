@@ -1,0 +1,58 @@
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+    background-color: rgb(25, 25, 25);
+    color: white;
+}
+a {
+    color: white;
+}
+
+
+.game-title {
+    font-weight: bold;
+    font-size: 30px;
+    color: orange;;
+}
+
+.primary-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.gametools-div {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.gametool1 {
+    width: 60px;
+}
+
+.button1 {
+    border-radius: 50%;
+    padding: 20px;
+    background-color: rgb(25, 25, 25);
+    border: 2px solid orange;
+    cursor: pointer;
+}
+.button2 {
+    color: black;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px 10px 15px;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.gameresult-style {
+    font-size: 24px;
+}
