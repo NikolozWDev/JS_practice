@@ -56,3 +56,23 @@ a {
 .gameresult-style {
     font-size: 24px;
 }
+
+@media(max-width: 500px) {
+    .button1 {
+        padding: 10px;
+    }
+    .game-title {
+        font-size: 20px;
+    }
+}
+
+.gamescoresstyle {
+    margin-top: -70px;
+}
+.gamescoresjs {
+    margin-top: 0px;
+}
+
+.movesstyle {
+    transform: translateY(-20px);
+}
