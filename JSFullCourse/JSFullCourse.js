@@ -459,3 +459,77 @@ function eventMaster() {
     const input3 = document.querySelector('#input3');
     document.querySelector('#input3Text').innerHTML = input3.value;
 };
+
+
+
+
+
+
+// Numbers + and - logic
+
+numberMinus = 0;
+
+function minus() {
+    numberMinus -= 1;
+    document.querySelector('#number').innerHTML = `${numberMinus}`;
+    if(numberMinus < 0) {
+        document.querySelector('#number').classList.add('numberminusstyle');
+    } else {
+        document.querySelector('#number').classList.remove('numberminusstyle');
+    };
+    
+    if(numberMinus > 0) {
+        document.querySelector('#number').classList.add('numberplusstyle');
+    } else {
+        document.querySelector('#number').classList.remove('numberplusstyle');
+    };
+};
+function plus() {
+    numberMinus += 1;
+    document.querySelector('#number').innerHTML = `${numberMinus}`;
+    if(numberMinus > 0) {
+        document.querySelector('#number').classList.add('numberplusstyle');
+    } else {
+        document.querySelector('#number').classList.remove('numberplusstyle');
+    };
+
+    if(numberMinus < 0) {
+        document.querySelector('#number').classList.add('numberminusstyle');
+    } else {
+        document.querySelector('#number').classList.remove('numberminusstyle');
+    };
+};
+
+
+
+
+
+// buttons selector logic
+
+function buttons() {
+    if(document.querySelector('#buttonpapa1').innerHTML === 'Gaming') {
+        document.querySelector('#buttonpapa1').classList.add('buttonprojs');
+        document.querySelector('#buttonpapa1').innerHTML = '.Gaming.'
+    } else if (document.querySelector('#buttonpapa1').innerHTML === '.Gaming.') {
+        document.querySelector('#buttonpapa1').classList.remove('buttonprojs');
+        document.querySelector('#buttonpapa1').innerHTML = 'Gaming';
+    }
+};
+function buttons2() {
+    if(document.querySelector('#buttonpapa2').innerHTML === 'Tech') {
+        document.querySelector('#buttonpapa2').classList.add('buttonprojs');
+        document.querySelector('#buttonpapa2').innerHTML = '.Tech.'
+    } else if(document.querySelector('#buttonpapa2').innerHTML === '.Tech.') {
+        document.querySelector('#buttonpapa2').classList.remove('buttonprojs');
+        document.querySelector('#buttonpapa2').innerHTML = 'Tech';
+    };
+};
+function buttons3() {
+    if(document.querySelector('#buttonpapa3').innerHTML === 'Tech') {
+        document.querySelector('#buttonpapa3').classList.add('buttonprojs');
+        document.querySelector('#buttonpapa3').innerHTML = '.Tech.'
+    } else if(document.querySelector('#buttonpapa3').innerHTML === '.Tech.') {
+        document.querySelector('#buttonpapa3').classList.remove('buttonprojs');
+        document.querySelector('#buttonpapa3').innerHTML = 'Tech';
+    };
+}
