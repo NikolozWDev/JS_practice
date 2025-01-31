@@ -64,3 +64,71 @@
 .input1-calculate:hover {
     opacity: 0.8;
 }
+
+
+
+.minus {
+    background-color: rgb(160, 9, 9);
+    color: white;
+    font-size: 30px;
+    border: none;
+    padding: 10px 20px 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.1s;
+}
+.minus:hover {
+    background-color: brown;
+}
+.minus:active {
+    opacity: 0.8;
+}
+
+.plus {
+    background-color: rgb(21, 150, 90);
+    color: white;
+    font-size: 20px;
+    border: none;
+    padding: 10px 20px 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.1s;
+}
+.plus:hover {
+    background-color: green;
+}
+.plus:active {
+    opacity: 0.8;
+}
+
+
+.numbers {
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+}
+.numberminusstyle {
+    color: rgb(143, 47, 47);
+}
+.numberplusstyle {
+    color: green;
+}
+
+
+
+
+.buttonpro {
+    padding: 8px 15px 8px 15px;
+    color: black;
+    font-size: 16px;
+    border-radius: 4px;
+    background-color: rgb(219, 219, 219);
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.buttonprojs {
+    background-color: black;
+    color: white;
+}
