@@ -102,3 +102,10 @@ a {
     justify-content: center;
     align-items: center;
 }
+
+.for6 {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+}
