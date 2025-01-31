@@ -23,8 +23,8 @@ function rpsGameReset() {
     rpsGameResults.rpsGameTies = 0;
     localStorage.removeItem('rpsGame');
     updateScore();
-    document.querySelector('#gameResult').innerHTML = '---';
-    document.querySelector('#moves').innerHTML = '---';
+    document.querySelector('#gameResult').innerHTML = 'Reseted';
+    document.querySelector('')
 };
 if(rpsGameReset === null) {
     rpsGameResults.rpsGameWins = 0;
@@ -37,6 +37,8 @@ function rpsGame(clientMove) {
     let randomrps = Math.random();
     let robotMove;
     let final;
+
+    document.querySelector('#gameScore').classList.add('gamescoresjs');
 
 
     function rpsGameResult() {
