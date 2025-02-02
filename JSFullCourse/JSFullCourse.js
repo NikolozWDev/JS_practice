@@ -465,7 +465,7 @@ function eventMaster() {
 
 
 
-// Numbers + and - logic
+// Numbers + and - (logic)
 
 numberMinus = 0;
 
@@ -506,30 +506,39 @@ function plus() {
 
 // buttons selector logic
 
-function buttons() {
-    if(document.querySelector('#buttonpapa1').innerHTML === 'Gaming') {
-        document.querySelector('#buttonpapa1').classList.add('buttonprojs');
-        document.querySelector('#buttonpapa1').innerHTML = '.Gaming.'
-    } else if (document.querySelector('#buttonpapa1').innerHTML === '.Gaming.') {
-        document.querySelector('#buttonpapa1').classList.remove('buttonprojs');
-        document.querySelector('#buttonpapa1').innerHTML = 'Gaming';
-    }
+function gammingbutton() {
+    resetButton();
+    document.querySelector('#buttonpapa1').classList.toggle('buttonprojs');
 };
-function buttons2() {
-    if(document.querySelector('#buttonpapa2').innerHTML === 'Tech') {
-        document.querySelector('#buttonpapa2').classList.add('buttonprojs');
-        document.querySelector('#buttonpapa2').innerHTML = '.Tech.'
-    } else if(document.querySelector('#buttonpapa2').innerHTML === '.Tech.') {
-        document.querySelector('#buttonpapa2').classList.remove('buttonprojs');
-        document.querySelector('#buttonpapa2').innerHTML = 'Tech';
-    };
+function musicbutton() {
+    resetButton();
+    document.querySelector('#buttonpapa2').classList.toggle('buttonprojs');
 };
-function buttons3() {
-    if(document.querySelector('#buttonpapa3').innerHTML === 'Tech') {
-        document.querySelector('#buttonpapa3').classList.add('buttonprojs');
-        document.querySelector('#buttonpapa3').innerHTML = '.Tech.'
-    } else if(document.querySelector('#buttonpapa3').innerHTML === '.Tech.') {
-        document.querySelector('#buttonpapa3').classList.remove('buttonprojs');
-        document.querySelector('#buttonpapa3').innerHTML = 'Tech';
-    };
+function techbutton() {
+    resetButton();
+    document.querySelector('#buttonpapa3').classList.toggle('buttonprojs');
+};
+
+function resetButton() {
+    document.querySelector('#buttonpapa1').classList.remove('buttonprojs');
+    document.querySelector('#buttonpapa2').classList.remove('buttonprojs');
+    document.querySelector('#buttonpapa3').classList.remove('buttonprojs');
+};
+
+
+
+
+
+// calculate cost
+
+function calculateMoney() {
+    const inputCostVariable = document.querySelector('#inputcost');
+    if(Number(inputCostVariable.value) >= 1) {
+    document.querySelector('#costjs').innerHTML = `${inputCostVariable.value}<span class="dollar">$</span>`;
+} else if(Number(inputCostVariable.value) === 0) {
+    document.querySelector('#costjs').innerHTML = `<span class="costred">You can't choose 0</span>`;
+}
+ else {
+    document.querySelector('#costjs').innerHTML = `<span class="costred">You can write only numbers!</span>`
+}
 }
