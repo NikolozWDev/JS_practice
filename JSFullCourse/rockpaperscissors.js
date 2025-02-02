@@ -47,8 +47,8 @@ function rpsGame(clientMove) {
 
     function rpsGameMoves() {
         document.querySelector('#moves').innerHTML = `You
-                <img class="gametool1" src="rockpaperscissors-assets/${clientMove}-emoji.png">
-                <img class="gametool1" src="rockpaperscissors-assets/${robotMove}-emoji.png">
+                <img class="gametool1" src="../JSFullCourse/rockpaperscissors-assets/${clientMove}-emoji.png">
+                <img class="gametool1" src="../JSFullCourse/rockpaperscissors-assets/${robotMove}-emoji.png">
                 Computer`;
     };
 
