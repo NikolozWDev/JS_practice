@@ -183,10 +183,23 @@
     color: green;
     font-size: 21px;
 }
+.dollar- {
+    color: red;
+    font-size: 21px;
+}
+.nonumber {
+    color: red;
+}
+.green {
+    color: green;
+}
 .costred {
     color: red;
     font-size: 15px;
     font-weight: normal;
+}
+.nonumber {
+    color: red;
 }
 .coststyle {
     color: white;
@@ -201,5 +214,63 @@
 @keyframes coststyleanim {
     100% {
         opacity: 1;
+    }
+}
+
+
+.totalstyle {
+    position: fixed;
+    right: 60px;
+    top: 20px;
+    font-size: 21px;
+    background-color: white;
+    color: black;
+    padding: 20px 40px 20px 40px;
+}
+.forpro {
+    position: fixed;
+    top: 100px;
+    right: 10px;
+    border: 2px solid orange;
+    background-color: white;
+}
+
+.totalred {
+    color: red;
+}
+.totalgreen {
+    color: green;
+}
+
+.casino-div {
+    animation-name: casinovar;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+}
+@keyframes casinovar {
+    100% {
+        position: fixed;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        padding: 0px 0px 0px 500px;
+        background-color: rgb(223, 223, 223);
+    }
+}
+
+.casinojs {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 0px 0px 0px 500px;
+    background-color: rgb(223, 223, 223);
+    animation-name: casino;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes casino {
+    100% {
+        transform: translateX(2000px);
     }
 }
