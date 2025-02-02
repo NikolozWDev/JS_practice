@@ -10,6 +10,7 @@
 </head>
 <body style="background-color: rgb(29, 29, 29); color: white;">
 
+
     <a href="dom.html"><div class="absolute1">DOM practicing page</div></a>
     <a href="rockpaperscissors.html"><div class="absolute2">Rock, Paper, Scissors | Game</div></a>
 
@@ -295,18 +296,23 @@
 
 
 
-
+                <span id="openbar" style="font-size: 30px; color: orange; cursor: pointer; position: fixed; top: 20px; right: 20px" onclick="openprobar()"></span>
+<div id="casino" class="casino-div"><span style="font-size: 30px; color: red; cursor: pointer;" onclick="closebar()">X</span>
+    
                 <div class="div-primary for3">
-                    <div class="primary-div for2 for6">
+                    <div class="primary-div for2 for6 forpro">
+                        
+                        <p id="total" class="totalstyle">total: 0$</p>
 
                         <p id="costjs" class="coststyle"></p>
                         
-                        <input class="inputcoststyle" id="inputcost" type="search" placeholder="$">
+                        <input class="inputcoststyle" id="inputcost" type="search" placeholder="$" onkeydown="keyboard(event)">
                         <button class="calculatebutton" onclick="calculateMoney()">Calculate</button>
 
                         
                     </div>
                 </div>
+</div>
 
 
 
