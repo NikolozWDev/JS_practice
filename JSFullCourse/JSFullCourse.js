@@ -529,16 +529,85 @@ function resetButton() {
 
 
 
+
+
 // calculate cost
 
+let totalAmount = localStorage.getItem('totalAmount') ? Number(localStorage.getItem('totalAmount')) : 0;
+
 function calculateMoney() {
+
+    let mathRandom = Math.random();
+
     const inputCostVariable = document.querySelector('#inputcost');
-    if(Number(inputCostVariable.value) >= 1) {
-    document.querySelector('#costjs').innerHTML = `${inputCostVariable.value}<span class="dollar">$</span>`;
-} else if(Number(inputCostVariable.value) === 0) {
+
+    if(mathRandom >= 0 && mathRandom < 1 / 2) {
+
+
+    if(Number(inputCostVariable.value) >= 1 && Number(inputCostVariable.value) <= 100) {
+    document.querySelector('#costjs').innerHTML = `<span class="green">+ ${inputCostVariable.value}</span><span class="dollar">$</span>`;
+    totalAmount += Number(inputCostVariable.value);
+} else if(Number(inputCostVariable.value) > 100) {
+    document.querySelector('#costjs').innerHTML = `<span class="costred">Limit is 100$</span>`;
+}
+ else if(Number(inputCostVariable.value) === 0) {
     document.querySelector('#costjs').innerHTML = `<span class="costred">You can't choose 0</span>`;
-}
- else {
+} else {
     document.querySelector('#costjs').innerHTML = `<span class="costred">You can write only numbers!</span>`
+};
+
+
+} else if (mathRandom >= 1 / 2 && mathRandom < 1) {
+
+
+    if(Number(inputCostVariable.value) >= 1 && Number(inputCostVariable.value) <= 100) {
+        document.querySelector('#costjs').innerHTML = `<span class="nonumber">-</span> <span class="nonumber">${inputCostVariable.value}</span><span class="dollar-">$</span>`;
+        totalAmount -= Number(inputCostVariable.value);
+    } else if(Number(inputCostVariable.value) > 100) {
+        document.querySelector('#costjs').innerHTML = `<span class="costred">Limit is 100$</span>`;
+    }
+     else if(Number(inputCostVariable.value) === 0) {
+        document.querySelector('#costjs').innerHTML = `<span class="costred">You can't choose 0</span>`;
+    } else {
+        document.querySelector('#costjs').innerHTML = `<span class="costred">You can write only numbers!</span>`
+    };
+
+
+};
+
+
+localStorage.setItem('totalAmount', totalAmount);
+
+
+document.querySelector('#total').innerHTML = `total: ${totalAmount}$`;
+if(totalAmount < 0) {
+    document.querySelector('#total').innerHTML = `total: <span class="totalred">${totalAmount}$</span>`;
+} else if(totalAmount > 0) {
+    document.querySelector('#total').innerHTML = `total: <span class="totalgreen">${totalAmount}$</span>`;
+};
+
+
+};
+function keyboard(event) {
+    if(event.key === 'Enter') {
+        calculateMoney();
+    };
+};
+
+function closebar() {
+    document.querySelector('#casino').classList.add('casinojs');
+    document.querySelector('#openbar').innerHTML = `O`;
 }
-}
+function openprobar() {
+    document.querySelector('#casino').classList.remove('casinojs');
+    document.querySelector('#openbar').innerHTML = ` `;
+};
+
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelector('#total').innerHTML = `total: ${totalAmount}$`;
+    if(totalAmount < 0) {
+        document.querySelector('#total').innerHTML = `total: <span class="totalred">${totalAmount}$</span>`;
+    } else if(totalAmount > 0) {
+        document.querySelector('#total').innerHTML = `total: <span class="totalgreen">${totalAmount}$</span>`;
+    };
+});
