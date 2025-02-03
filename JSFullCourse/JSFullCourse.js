@@ -645,5 +645,50 @@ const arraynum = [3, 13, 14];
 let i20 = 0;
 
 while(i20 < arraynum.length) {
+    console.log(arraynum[i20]);
     i20 = i20 + 1;
+};
+
+
+
+// Todolist practice #2
+
+let todoArray = [''];
+
+
+settingslogic();
+
+function settingslogic() {
+
+let todoListHTML = '';
+
+let i21 = 0;
+while(i21 < todoArray.length) {
+    let todo = todoArray[i21];
+    let htmlp = `<p>${todo}</p>`
+
+    todoListHTML += htmlp
+
+    i21 = i21 + 1;
+};
+
+document.querySelector('#todolistcontainer').innerHTML = todoListHTML;
+
 }
+
+function todolistF2() {
+
+    let todoArrayvalue = document.querySelector('#inputTodolist');
+    let userTodo = todoArrayvalue.value;
+    todoArray.push(userTodo);
+
+    todoArrayvalue.value = '';
+
+    settingslogic();
+
+};
+function addEvent(event) {
+    if(event.key === 'Enter') {
+        todolistF2();
+    };
+};
