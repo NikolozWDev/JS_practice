@@ -611,3 +611,39 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelector('#total').innerHTML = `total: <span class="totalgreen">${totalAmount}$</span>`;
     };
 });
+
+
+
+
+
+
+
+
+
+
+// Todolist practice #1
+
+const todoList1 = [];
+
+function todoListF() {
+    const todoListvar = document.querySelector('#inputTodo');
+    const productName = todoListvar.value;
+
+    todoList1.push(productName);
+    console.log(todoList1);
+
+    todoListvar.value = '';
+};
+
+
+
+
+// practicing loops
+
+const arraynum = [3, 13, 14];
+
+let i20 = 0;
+
+while(i20 < arraynum.length) {
+    i20 = i20 + 1;
+}
