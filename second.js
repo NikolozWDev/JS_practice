@@ -215,3 +215,70 @@ function calculate(number1, number2) {
     return sentence.toLowerCase().includes('english');
   };
   console.log(spEng('adawdsawsdEnagLishwdasd'));
+
+
+
+
+  const arraynum = [3, 13, 14];
+
+let i20 = 0;
+
+while(i20 < arraynum.length) {
+    console.log(arraynum[i20]);
+    i20 = i20 + 1;
+};
+
+
+
+
+const arrayp1 = [1, 52, 72, 723, 5324, 53423, 43563,];
+
+let i22 = 0;
+while(i22 < arrayp1.length) {
+
+    arrayp1[arrayp1.length - 1] = 99;
+    console.log(arrayp1[i22]);
+
+    i22 = i22 + 1;
+};
+
+
+
+
+const arrayp2 = ['Hello', 'whats up', 'good morning', 'you?'];
+arrayp2.reverse();
+console.log(arrayp2);
+
+
+
+const arrayp3 = [];
+
+i24 = 0;
+while(i24 <= 10) {
+    arrayp3.push(i24);
+    i24 = i24 + 2;
+};
+console.log(arrayp3);
+
+
+
+const arrayp4 = [];
+
+i25 = 5;
+while(i25 > 0) {
+    arrayp4.push(i25);
+    i25 = i25 - 1;
+};
+console.log(arrayp4);
+
+
+
+let arrayp5 = [2, 4, 6];
+let arrayp52 = [];
+
+let i26 = 0;
+while(i26 < arrayp5.length) {
+    arrayp52.push(arrayp5[i26] * 2);
+    i26 = i26 + 1;
+};
+console.log(arrayp52);
