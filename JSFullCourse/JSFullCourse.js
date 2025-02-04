@@ -643,7 +643,6 @@ function todoListF() {
 const arraynum = [3, 13, 14];
 
 let i20 = 0;
-
 while(i20 < arraynum.length) {
     console.log(arraynum[i20]);
     i20 = i20 + 1;
@@ -653,7 +652,7 @@ while(i20 < arraynum.length) {
 
 // Todolist practice #2
 
-let todoArray = [''];
+let todoArray = [];
 
 
 settingslogic();
@@ -664,8 +663,17 @@ let todoListHTML = '';
 
 let i21 = 0;
 while(i21 < todoArray.length) {
+
     let todo = todoArray[i21];
-    let htmlp = `<p>${todo}</p>`
+
+
+    let htmlp = `<p>
+    ${todo.namepro} ${todo.datepro} 
+    <button onclick="
+    todoArray.splice(${i21}, 1);
+    settingslogic();
+    ">Delete</button>
+    </p>`
 
     todoListHTML += htmlp
 
@@ -680,7 +688,14 @@ function todolistF2() {
 
     let todoArrayvalue = document.querySelector('#inputTodolist');
     let userTodo = todoArrayvalue.value;
-    todoArray.push(userTodo);
+    let datepro = document.querySelector('#inputdate');
+    let dateValue = datepro.value;
+    todoArray.push(
+        {
+            namepro: userTodo,
+            datepro: dateValue,
+        },
+    );
 
     todoArrayvalue.value = '';
 
