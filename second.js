@@ -282,3 +282,14 @@ while(i26 < arrayp5.length) {
     i26 = i26 + 1;
 };
 console.log(arrayp52);
+
+
+
+// function typeOfSum(a, b) {
+//     return `Hello this is ${a} and good ${b}`;
+//   };
+//   if(Number(a) >= Number(b) || Number(a) <= Number(b)) {
+//   console.log(typeOfSum(3, 8));
+// } else {
+//     console.log(typeOfSum('sum', 'luck'));
+// };
