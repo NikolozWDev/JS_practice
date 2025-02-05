@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="connection.css">
+    <title>Todolist</title>
+    <script src="todolist.js" defer></script>
+</head>
+<body style="background-color: rgb(29, 29, 29); color: white;">
+
+
+    <div class="parent-div">
+    <div class="primary-container">
+        
+
+        <p class="main-title">Todo List</p>
+        
+        
+        <div class="buttons-div">
+            <input id="todoid" type="text" placeholder="Todo name" onkeydown="eventListener(event)">
+            <input type="date">
+            <button onclick="todoListF3()">Add</button>
+        </div>
+
+        
+        <div id="listparagraph"></div>
+
+
+    </div>
+</div>
+
+    
+</body>
+</html>
