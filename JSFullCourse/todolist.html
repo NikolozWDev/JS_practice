@@ -19,13 +19,18 @@
         
         
         <div class="buttons-div">
-            <input id="todoid" type="text" placeholder="Todo name" onkeydown="eventListener(event)">
-            <input type="date">
-            <button onclick="todoListF3()">Add</button>
+            <input id="todoid" class="todostyle" type="text" placeholder="Todo name" onkeydown="eventListener(event)">
+            <input id="dateid" class="todostyle" type="date">
+            <button class="addbutton" onclick="todoListF3()">Add</button>
         </div>
 
+        <diV style="display: flex; align-items: center; width: 80%; justify-content: space-around;">
+        <p style="color: red; transform: translateY(-10px); font-size: 14px;" id="hiddenwarn"></p>
+        <p style="color: red; transform: translateY(-10px); font-size: 14px;" id="hiddenwarn2"></p>
+    </diV>
+
         
-        <div id="listparagraph"></div>
+        <div class="paragraphstyle" id="listparagraph"></div>
 
 
     </div>
