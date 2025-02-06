@@ -293,3 +293,129 @@ console.log(arrayp52);
 // } else {
 //     console.log(typeOfSum('sum', 'luck'));
 // };
+
+
+
+
+
+function eventNumber() {
+
+    i31 = 0;
+    while(i31 < 100) {
+        if(i31 % 2 === 0) {
+        i31++;
+        if(i31 > 50 && i31 < 70) {
+            i31++;
+            continue;
+        };
+        console.log(i31);
+    }
+    i31++;
+    if(i31 === 80) {
+        break;
+    };
+    };
+
+};
+
+eventNumber();
+
+
+
+
+
+
+
+
+function arraypro() {
+
+    let arrayStrings = 'Hello, Please Search Here To Answer The Question Search';
+
+    if(arrayStrings.split(' ').includes('Search')) {
+        console.log(true);
+    } else {
+        console.log(false);
+    };
+
+
+
+    let arrayVar = arrayStrings.split(' ');
+
+    let i33 = 0;
+    while (i33 < arrayVar.length) {
+        let j33 = i33 + 1;
+        while (j33 < arrayVar.length) {
+            if (arrayVar[i33] == arrayVar[j33]) {
+                console.log('REPEATED !');
+            }
+            j33++;
+        }
+        i33++;
+    }
+
+};
+
+arraypro();
+
+
+
+
+
+function findIndex(array, word) {
+
+    i35 = 0;
+    while(i35 < array.length) {
+        if(array[i35] === word) {
+            return true
+        } else {
+            return false;
+        };
+    };
+
+};
+
+
+
+
+
+      function removeEgg(foods) {
+        const result = [];
+
+        let eggcalculate = 0;
+
+        for (let i = 0; i < foods.length; i++) {
+          // If the string is 'egg', use continue to skip it.
+          if (foods.reverse()[i] === 'egg' && eggcalculate < 2) {
+            eggcalculate++;
+            continue;
+          }
+
+          // We don't need to have an else here because
+          // the only way to reach this code is if the 
+          // if-statement above is false.
+          result.push(foods[i]);
+        }
+
+        return result.reverse();
+      }
+
+      console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']));
+
+
+
+
+
+
+    let i40 = 1
+    while(i40 <= 20) {
+        if(i40 % 3 === 0) {
+            console.log('Fizz')
+        } else if(i40 % 5 === 0) {
+            console.log('Buzz');
+        } else if(i40 % 3 === 0 && i40 % 5 === 0) {
+            console.log('FizzBuzz');
+        } else {
+            console.log(i40);
+        };
+        i40++;
+    };
