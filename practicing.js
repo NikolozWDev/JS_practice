@@ -85,3 +85,31 @@ function functionObjectPractice4() {
     console.log(practiceL2.repeat(5));
 };
 functionObjectPractice4();
+
+
+
+
+
+function makeUpperCase(str) {
+    return str.toUpperCase();
+  };
+
+  console.log(makeUpperCase('something'));
+
+
+
+
+
+
+
+
+
+
+
+  function timeset1() {
+    console.log('time out');
+  };
+  timeset1();
+  
+  setTimeout(timeset1, 2000);
+//   setInterval(timeset1, 2000);
