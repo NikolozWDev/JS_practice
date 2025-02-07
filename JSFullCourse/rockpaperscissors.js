@@ -32,6 +32,50 @@ if(rpsGameReset === null) {
     rpsGameResults.rpsGameTies = 0;
 }
 
+
+let intervalId = null;
+
+function autoPlay() {
+ 
+    if(!intervalId) {
+        intervalId = setInterval(function() {
+        let randomrps = Math.random();
+        let randomclientMove = Math.random();
+        let robotMove;
+        if(randomrps > 0 && randomrps <= 1 / 3) {
+            robotMove = 'Rock';
+        } else if(randomrps > 1 / 3 && randomrps <= 2 / 3) {
+            robotMove = 'Paper';
+        } else if(randomrps > 2 / 3 && randomrps <= 1) {
+            robotMove = 'Scissors';
+        };
+
+
+        if(randomclientMove > 0 && randomclientMove <= 1 / 3) {
+            clientMove = 'Rock';
+        } else if(randomclientMove > 1 / 3 && randomclientMove <= 2 / 3) {
+            clientMove = 'Paper';
+        } else if(randomclientMove > 2 / 3 && randomclientMove <= 1) {
+            clientMove = 'Scissors';
+        };
+
+        document.querySelector('#autoplayp').innerHTML = `Stop play`;
+
+        rpsGame(clientMove);
+
+    },
+     500);
+
+    } else {
+        clearInterval(intervalId);
+        intervalId = null;
+        document.querySelector('#autoplayp').innerHTML = `Auto play`;
+    };
+    
+};
+
+
+
 function rpsGame(clientMove) {
 
     let randomrps = Math.random();
