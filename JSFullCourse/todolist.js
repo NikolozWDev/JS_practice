@@ -63,12 +63,14 @@ function todoListF3() {
             date: dateValue,
         },
     );
-    todoArrayValuemini.value = '';
-    dateValuemini.value = '';
+    setTimeout(function() {
+        todoArrayValuemini.value = ''; dateValuemini.value = '';
+    },
+     500);
 };
 
 
-    todoListpar();
+    setTimeout(todoListpar, 500);
 
 };
 
