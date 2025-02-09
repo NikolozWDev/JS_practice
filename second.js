@@ -419,3 +419,13 @@ function findIndex(array, word) {
         };
         i40++;
     };
+
+
+
+
+
+const funvar = () => {
+    console.log(2 + 3);
+};
+funvar();
+funvar();
