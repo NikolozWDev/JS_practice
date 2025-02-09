@@ -535,6 +535,77 @@ function resetButton() {
 
 let totalAmount = localStorage.getItem('totalAmount') ? Number(localStorage.getItem('totalAmount')) : 0;
 
+
+let intervalIdpro = null;
+
+function autoMoney() {
+    if(!intervalIdpro) {
+        intervalIdpro = setInterval(function() {
+
+            
+                let mathRandom = Math.random();
+
+                const inputCostVariable = document.querySelector('#inputcost');
+                inputCostVariable.value = Math.round(Math.random() * 100)
+
+                if(mathRandom >= 0 && mathRandom < 1 / 2) {
+
+
+                if(Number(inputCostVariable.value) >= 1 && Number(inputCostVariable.value) <= 100) {
+                document.querySelector('#costjs').innerHTML = `<span class="green">+ ${inputCostVariable.value}</span><span class="dollar">$</span>`;
+                totalAmount += Number(inputCostVariable.value);
+            } else if(Number(inputCostVariable.value) > 100) {
+                document.querySelector('#costjs').innerHTML = `<span class="costred">Limit is 100$</span>`;
+            }
+            else if(Number(inputCostVariable.value) === 0) {
+                document.querySelector('#costjs').innerHTML = `<span class="costred">You can't choose 0</span>`;
+            } else {
+                document.querySelector('#costjs').innerHTML = `<span class="costred">You can write only numbers!</span>`
+            };
+
+
+            } else if (mathRandom >= 1 / 2 && mathRandom < 1) {
+
+
+                if(Number(inputCostVariable.value) >= 1 && Number(inputCostVariable.value) <= 100) {
+                    document.querySelector('#costjs').innerHTML = `<span class="nonumber">-</span> <span class="nonumber">${inputCostVariable.value}</span><span class="dollar-">$</span>`;
+                    totalAmount -= Number(inputCostVariable.value);
+                } else if(Number(inputCostVariable.value) > 100) {
+                    document.querySelector('#costjs').innerHTML = `<span class="costred">Limit is 100$</span>`;
+                }
+                else if(Number(inputCostVariable.value) === 0) {
+                    document.querySelector('#costjs').innerHTML = `<span class="costred">You can't choose 0</span>`;
+                } else {
+                    document.querySelector('#costjs').innerHTML = `<span class="costred">You can write only numbers!</span>`
+                };
+
+
+            };
+
+
+            localStorage.setItem('totalAmount', totalAmount);
+
+
+            document.querySelector('#total').innerHTML = `total: ${totalAmount}$`;
+            if(totalAmount < 0) {
+                document.querySelector('#total').innerHTML = `total: <span class="totalred">${totalAmount}$</span>`;
+            } else if(totalAmount > 0) {
+                document.querySelector('#total').innerHTML = `total: <span class="totalgreen">${totalAmount}$</span>`;
+};
+
+
+document.querySelector('#automoneybutton').innerHTML = 'Stop Auto';
+
+
+        }, 500);
+    } else {
+        clearInterval(intervalIdpro)
+        intervalIdpro = null;
+        document.querySelector('#automoneybutton').innerHTML = 'Auto Play';
+    }
+};
+
+
 function calculateMoney() {
 
     let mathRandom = Math.random();
@@ -706,4 +777,66 @@ function addEvent(event) {
     if(event.key === 'Enter') {
         todolistF2();
     };
+};
+
+
+
+
+
+
+
+
+
+
+// add button exercices #1
+
+const addbuttonexer = () => {
+    document.querySelector('#addbuttonpro').innerHTML = 'finished';
+}
+
+const addButton = () => {
+
+    setTimeout(addbuttonexer, 1000);
+
+};
+
+
+
+
+
+// add button exercices #2 
+
+const resultAdd = () => {
+
+
+    if(document.querySelector('#addbuttonpro2').innerHTML === 'Finished') {
+        document.querySelector('#pro123').innerHTML = '<span style="color: red;">You must added!</span>';
+    } else {
+        document.querySelector('#addbuttonpro2').innerHTML = 'Loading...'
+
+        setTimeout(function() {
+            document.querySelector('#addbuttonpro2').innerHTML = 'Finished'
+        }, 2000)
+    };
+
+};
+
+
+
+
+
+
+// add button exercices #3
+
+let timeoutId;
+
+function displayMessage() {
+  const messageElement = document.querySelector('#pro1234');
+  messageElement.innerHTML = 'Added';
+
+  clearTimeout(timeoutId);
+
+  timeoutId = setTimeout(function() {
+    messageElement.innerHTML = '';
+  }, 1000);
 };
