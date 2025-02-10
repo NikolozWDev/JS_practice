@@ -9,13 +9,23 @@
 </head>
 <body>
 
+    <div id="primarybar" style="background-color: rgb(29, 29, 29); padding: 0px 150px 0px 0px; height: 100vh; position: fixed;">
+        <p id="closebarx" style="position: absolute; top: 0; right: 0; cursor: pointer;">X</p>
+    <div class="absolutenums" style="color: orange; font-size: 18px; position: absolute; top: 20px; left: 20px;">
+        <p>1 = Rock</p>
+        <p>2 = Paper</p>
+        <p>3 = Scissors</p>
+    </div>
+</div>
+<p id="openbarx" style="font-size: 20px; font-weight: bold; cursor: pointer;"></p>
+
     <div class="primary-container">
     <p class="game-title">Rock, Paper, Scissors | Game</p>
     
     <div class="gametools-div">
-            <button class="button1" onclick="rpsGame('Rock')"><img class="gametool1" src="rockpaperscissors-assets/rock-emoji.png"></button>
-            <button class="button1" onclick="rpsGame('Paper')"><img class="gametool1" src="rockpaperscissors-assets/paper-emoji.png"></button>
-            <button class="button1" onclick="rpsGame('Scissors')"><img class="gametool1" src="rockpaperscissors-assets/scissors-emoji.png"></button>
+            <button id="rockbutton" class="button1"><img class="gametool1" src="rockpaperscissors-assets/rock-emoji.png"></button>
+            <button id="paperbutton" class="button1"><img class="gametool1" src="rockpaperscissors-assets/paper-emoji.png"></button>
+            <button id="scissorsbutton" class="button1"><img class="gametool1" src="rockpaperscissors-assets/scissors-emoji.png"></button>
         </div>
 
             <p class="gameresult-style" id="gameResult"></p>
@@ -25,8 +35,8 @@
             <p class="gamescoresstyle" id="gameScore"></p>
 
 
-            <button class="button2" onclick="rpsGameReset()">Reset scores</button>
-            <button id="autoplayp" class="button2" onclick="autoPlay()">Auto play</button>
+            <button id="resetbutton" class="button2">Reset scores</button>
+            <button id="autoplayp" class="button2">Auto play</button>
         </div>
 
 </body>
