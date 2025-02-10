@@ -840,3 +840,38 @@ function displayMessage() {
     messageElement.innerHTML = '';
   }, 1000);
 };
+
+
+
+
+
+
+
+
+// triangle logic
+
+const mainFun = (param) => {
+
+    let resultsad = '';
+
+    for(i40 = 0; i40 < param / 2; i40++) {
+        resultsad += '|' + ' '.repeat(i40) + '\\' + '<br>';
+    };
+    for(i40 = param / 2 - 1; i40 >= 0; i40--) {
+        resultsad += '|' + ' '.repeat(i40) + '/' + '<br>';
+    };
+
+
+    document.querySelector('#texthere').innerHTML = resultsad;
+
+
+};
+
+
+
+const eventproxar = (event) => {
+    if(event.key === 'Enter') {
+        let param = Number(document.querySelector('#triangle').value);
+        mainFun(param);
+    };
+};
