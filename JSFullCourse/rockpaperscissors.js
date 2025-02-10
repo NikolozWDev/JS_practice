@@ -1,6 +1,46 @@
 
 
 
+document.querySelector('#rockbutton').addEventListener('click', () => {
+    rpsGame('Rock');
+});
+document.querySelector('#paperbutton').addEventListener('click', () => {
+    rpsGame('Paper');
+});
+document.querySelector('#scissorsbutton').addEventListener('click', () => {
+    rpsGame('Scissors');
+});
+document.querySelector('#resetbutton').addEventListener('click', () => {
+    rpsGameReset();
+});
+document.querySelector('#autoplayp').addEventListener('click', () => {
+    autoPlay();
+});
+
+document.body.addEventListener('keydown', (event) => {
+    if(event.key === '1') {
+        rpsGame('Rock');
+    } else if(event.key === '2') {
+        rpsGame('Paper');
+    } else if(event.key === '3') {
+        rpsGame('Scissors');
+    };
+});
+
+
+
+
+
+
+document.querySelector('#closebarx').addEventListener('click', () => {
+    document.querySelector('#primarybar').classList.add('primarybarjs')
+    document.querySelector('#openbarx').innerHTML = '>';
+})
+document.querySelector('#openbarx').addEventListener('click', () => {
+    document.querySelector('#primarybar').classList.remove('primarybarjs')
+    document.querySelector('#openbarx').innerHTML = '';
+})
+
 let rpsGameResults = JSON.parse(localStorage.getItem('rpsGame')) || {
     rpsGameWins: 0,
     rpsGameLosses: 0,
