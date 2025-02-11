@@ -16,10 +16,8 @@ function todoListpar() {
         let htmlparagraph = `<div class="diviable">
         <div class="widthpro">${todopro.name}</div> 
         <div>${todopro.date}</div> 
-        <button class="deletebutton" onclick="
-        todoListArray.splice(${i30}, 1);
-        todoListpar();
-        ">Delete</button>
+        <button id="deletebuttonjs" class="deletebutton"
+        >Delete</button>
         </div>`
 
 
@@ -31,9 +29,23 @@ function todoListpar() {
 
     document.querySelector('#listparagraph').innerHTML = htmlShow;
 
+    document.querySelectorAll('#deletebuttonjs').forEach((deleteButton, index) => {
+        deleteButton.addEventListener('click', () => {
+            todoListArray.splice(index, 1);
+            todoListpar();
+        });
+    });
+
 };
 
 
+
+document.querySelector('#addbuttonjs').addEventListener('click', () => {
+    todoListF3();
+});
+document.querySelector('#todoid').addEventListener('keydown', () => {
+    eventListener(event);
+})
 
 function todoListF3() {
 
