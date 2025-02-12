@@ -429,3 +429,50 @@ const funvar = () => {
 };
 funvar();
 funvar();
+
+
+
+
+arr1 = [1, -42, 63, 3, 71];
+
+arr1.filter((value, index) => {
+    if(value >= 0) {
+        return true
+    } else {
+        return false;
+    };
+});
+
+arr1.map((value) => {
+    return value * 2;
+});
+
+
+
+
+
+
+
+// advanced functions exercies #1
+
+
+// arr2 = [4, 52];
+
+// let i41 = 0;
+// while(i41 < arr2.length - 1) {
+
+//     let resultarr = arr2[i41] * arr2[i41 + 1];
+
+//     console.log(resultarr);
+
+//     i41++
+// };
+
+
+const resultmult = (a, b) => {
+
+    let resultmultpro = a * b;
+    console.log(resultmultpro);
+
+};
+resultmult(42, 4);
