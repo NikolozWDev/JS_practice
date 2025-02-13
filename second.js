@@ -453,7 +453,7 @@ arr1.map((value) => {
 
 
 
-// advanced functions exercies #1
+
 
 
 // arr2 = [4, 52];
@@ -469,6 +469,8 @@ arr1.map((value) => {
 // };
 
 
+// advanced functions exercies #1
+
 const resultmult = (a, b) => {
 
     let resultmultpro = a * b;
@@ -476,3 +478,91 @@ const resultmult = (a, b) => {
 
 };
 resultmult(42, 4);
+
+
+
+// advanced functions exercies #2
+
+const countPositive = (nums) => {
+
+    numsNatural = [];
+
+    i42 = 0;
+    while(i42 < nums.length) {
+
+        if(nums[i42] >= 0) {
+            numsNatural.push(nums[i42]);
+        };
+
+        i42++;
+    };
+
+    console.log(numsNatural.length);
+
+
+};
+
+
+countPositive([2, 52, -32, 63, -43]);
+
+
+
+// advanced functions exercies #3
+
+const addNum = (arrays, num) => {
+
+
+    let newarr = [];
+
+    let i43 = 0;
+    while(i43 < arrays.length) {
+
+        newarr.push(arrays[i43] + num);
+
+        i43++;
+    };
+
+    console.log(newarr);
+
+};
+
+addNum([4, 6, -2], 5);
+
+
+
+// advanced functions exercies #4
+
+// const removeEggs = (food) => {
+
+//     let newfood = [];
+
+//     let i44 = 0;
+//     while(i44 < food.length) {
+
+//         if(food.includes('Egg')) {
+//             newfood.push(!food.includes('Egg'));
+//         } else {
+//             newfood.push(food);
+//         };
+
+//         i44++;
+//     };
+
+//     console.log(newfood);
+
+// };
+
+// removeEggs(['Milk', 'Egg', 'Bread', 'Egg', 'Egg', 'Water']);
+
+const removeEggs = (food) => {
+    eggremoved = 0
+    return food.filter((food) => {
+        while(food === 'Egg' && eggremoved < 2) {
+            eggremoved++;
+            return false
+        }
+        
+        return true;
+    });
+};
+console.log(removeEggs(['Milk', 'Egg', 'Bread', 'Egg', 'Egg', 'Water']));
