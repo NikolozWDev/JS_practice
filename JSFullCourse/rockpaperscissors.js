@@ -24,6 +24,10 @@ document.body.addEventListener('keydown', (event) => {
         rpsGame('Paper');
     } else if(event.key === '3') {
         rpsGame('Scissors');
+    } else if(event.key === 'Control') {
+        autoPlay();
+    } else if(event.key === 'Alt') {
+        rpsGameReset();
     };
 });
 
@@ -58,14 +62,29 @@ updateScore();
 
 
 function rpsGameReset() {
-    rpsGameResults.rpsGameWins = 0;
-    rpsGameResults.rpsGameLosses = 0;
-    rpsGameResults.rpsGameTies = 0;
-    localStorage.removeItem('rpsGame');
-    updateScore();
-    document.querySelector('#gameResult').innerHTML = 'Reseted';
-    document.querySelector('')
-};
+
+    document.querySelector('#confrim').innerHTML = `
+    <div class="sure-container">
+        <p class="areyou">Are you sure?</p>
+        <button id="yesbutton" class="confirm-btn">Yes</button>
+        <button id="nobutton" class="confirm-btn">No</button>
+        </div>
+    `;
+
+    document.querySelector('#yesbutton').addEventListener('click', () => {
+        rpsGameResults.rpsGameWins = 0;
+        rpsGameResults.rpsGameLosses = 0;
+        rpsGameResults.rpsGameTies = 0;
+        localStorage.removeItem('rpsGame');
+        updateScore();
+        document.querySelector('#gameResult').innerHTML = 'Reseted';
+        document.querySelector('#confrim').innerHTML = '';
+    });
+
+    document.querySelector('#nobutton').addEventListener('click', () => {
+        document.querySelector('#confrim').innerHTML = '';
+    });
+}
 if(rpsGameReset === null) {
     rpsGameResults.rpsGameWins = 0;
     rpsGameResults.rpsGameLosses = 0;
