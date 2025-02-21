@@ -566,3 +566,19 @@ const removeEggs = (food) => {
     });
 };
 console.log(removeEggs(['Milk', 'Egg', 'Bread', 'Egg', 'Egg', 'Water']));
+
+
+
+
+// function isDigit(s) {
+  
+//     if(toString(s)) {
+//       return true;
+//     };
+//     if(!toString(s)) {
+//       return false;
+//     };
+    
+//   };
+
+//   isDigit('adwasd');
