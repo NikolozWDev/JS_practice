@@ -875,3 +875,14 @@ const eventproxar = (event) => {
         mainFun(param);
     };
 };
+
+
+
+
+
+// burger menu
+
+let openpro = document.querySelector('#burgerpro')
+openpro.addEventListener('click', () => {
+    document.querySelector('.main-container-open').classList.toggle('active');
+});
