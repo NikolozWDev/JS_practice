@@ -886,3 +886,100 @@ let openpro = document.querySelector('#burgerpro')
 openpro.addEventListener('click', () => {
     document.querySelector('.main-container-open').classList.toggle('active');
 });
+
+
+
+
+
+// timer
+const hour = document.querySelector('#hour');
+const minute = document.querySelector('#minute');
+const second = document.querySelector('#second');
+const milisecond = document.querySelector('#milisecond');
+const startTime = document.querySelector('#starttime');
+const resetbutton = document.querySelector('#resetbutton');
+const cutButton = document.querySelector('#cutbutton');
+const timerDiv = document.querySelector('#timer-div');
+let cutArr = [];
+let htmlpro = ``;
+let i = 0;
+while(i < cutArr.length) {
+    htmlpro += `
+            <p style="font-size: 40px;">
+            <span>${cutArr[i].hou}</span>:
+            <span>${cutArr[i].min}</span>:
+            <span>${cutArr[i].sec}</span>:
+            <span style="font-size: 25px;" id="milisecond">${cutArr[i].milesec}</span>
+        </p>
+    `
+    i++;
+}
+timerDiv.innerHTML = htmlpro;
+
+let hourI = 0;
+let minuteI = 0;
+let secondI = 0;
+let miliI = 0;
+
+let intervalIds;
+
+startTime.addEventListener('click', () => {
+    if(!intervalIds) {
+        intervalIds = setInterval(() => {
+            miliI = miliI + 1;
+            if(miliI === 100) {
+            miliI = 0;
+            secondI = secondI + 1;
+            }
+            if(secondI === 60) {
+                secondI = 0;
+                minuteI = minuteI + 1;
+            };
+            if(minuteI === 60) {
+                minuteI = 0;
+                hourI = hourI + 1;
+            };
+        
+            milisecond.innerHTML = miliI.toString().padStart(2, '0');
+            second.innerHTML = secondI.toString().padStart(2, '0');
+            minute.innerHTML = minuteI.toString().padStart(2, '0');
+            hour.innerHTML = hourI.toString().padStart(2, '0');
+            startTime.innerHTML = `Stop`
+            startTime.style.backgroundColor = 'red';
+        }, 10);
+    } else {
+        clearInterval(intervalIds);
+        intervalIds = null
+        startTime.innerHTML = `Start`
+        startTime.style.backgroundColor = 'green';
+    }
+})
+resetbutton.addEventListener('click', () => {
+    hourI = 0;
+    minuteI = 0;
+    secondI = 0;
+    miliI = 0;
+    milisecond.innerHTML = '00';
+    second.innerHTML = '00';
+    minute.innerHTML = '00';
+    hour.innerHTML = '00';
+    if (intervalIds) {
+        clearInterval(intervalIds);
+        intervalIds = null;
+        startTime.innerHTML = `Start`;
+        startTime.style.backgroundColor = 'green';
+    }
+})
+cutButton.addEventListener('click', () => {
+    if( !(milisecond.innerHTML === '00' || second.innerHTML === '00' || minute.innerHTML === '00' || hour.innerHTML === '00') ) {
+        cutArr.push(
+            {
+                milesec: milisecond.innerHTML,
+                sec: second.innerHTML,
+                min: minute.innerHTML,
+                hou: hour.innerHTML,
+            },
+        );
+    }
+})
+console.log(cutArr)
